@@ -46,8 +46,8 @@ class Blog extends Component {
                 <Route path="/" render={() => <h1>Home 2</h1>} /> */}
 				{/* The order here is important. The 1st one to match is triggered */}
 				<Route path="/" exact component={Posts} />
-				<Route path="/new-post" component={FullPost} />
-				<Route path="/:id" exact component={Posts} />
+				<Route path="/new-post" component={NewPost} />
+				<Route path="/:id" exact component={FullPost} />
 			</div>
 		);
 	}
