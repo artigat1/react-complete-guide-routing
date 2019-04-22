@@ -3,7 +3,6 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 
 import './Blog.css';
 import Posts from './Posts/Posts';
-import FullPost from './FullPost/FullPost';
 import NewPost from './NewPost/NewPost';
 
 class Blog extends Component {
@@ -15,7 +14,7 @@ class Blog extends Component {
 						<ul>
 							<li>
 								<NavLink
-									to="/"
+									to="/posts"
 									exact
 									activeClassName="my-active"
 									activeStyle={{
@@ -24,7 +23,7 @@ class Blog extends Component {
 										textDecoration: 'underline'
 									}}
 								>
-									Home
+									Posts
 								</NavLink>
 							</li>
 							<li>
@@ -46,9 +45,8 @@ class Blog extends Component {
                 <Route path="/" render={() => <h1>Home 2</h1>} /> */}
 				{/* The order here is important. The 1st one to match is triggered */}
 				<Switch>
-					<Route path="/" exact component={Posts} />
 					<Route path="/new-post" component={NewPost} />
-					<Route path="/:id" exact component={FullPost} />
+					<Route path="/posts" component={Posts} />
 				</Switch>
 			</div>
 		);
