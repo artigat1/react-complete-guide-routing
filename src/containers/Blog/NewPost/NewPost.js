@@ -10,6 +10,11 @@ class NewPost extends Component {
 		author: 'Max'
 	};
 
+	componentDidMount() {
+		// To check whether authenticated and can use this component.
+		// if unauth = this.props.history.replace('/posts');
+	}
+
 	postDataHandler = () => {
 		const data = {
 			title: this.state.title,
