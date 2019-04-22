@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
 
 import './Blog.css';
 import Posts from './Posts/Posts';
@@ -45,9 +45,11 @@ class Blog extends Component {
 				{/* <Route path="/" exact render={() => <h1>Home</h1>} />
                 <Route path="/" render={() => <h1>Home 2</h1>} /> */}
 				{/* The order here is important. The 1st one to match is triggered */}
-				<Route path="/" exact component={Posts} />
-				<Route path="/new-post" component={NewPost} />
-				<Route path="/:id" exact component={FullPost} />
+				<Switch>
+					<Route path="/" exact component={Posts} />
+					<Route path="/new-post" component={NewPost} />
+					<Route path="/:id" exact component={FullPost} />
+				</Switch>
 			</div>
 		);
 	}
