@@ -17,7 +17,12 @@
 }
 
 .Blog a:hover,
-.Blog a:active {
+.Blog a:active,
+.Blog a.active {
 	color: #fa923f;
 	text-decoration: none;
+}
+
+.Blog .my-active {
+	color: lightgreen;
 }
